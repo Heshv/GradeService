@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="NewWebService" targetNamespace="http://webservices.gradeservice/" xmlns:tns="http://webservices.gradeservice/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sc="http://schemas.sun.com/2006/03/wss/server" xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy" 
+ >
+    <message name="getStudentById"/>
+    <message name="getStudentByIdResponse"/>
+    <message name="getSubjectGroupById"/>
+    <message name="getSubjectGroupByIdResponse"/>
+    <message name="getMarkById"/>
+    <message name="getMarkByIdResponse"/>
+    <message name="getSubjectById"/>
+    <message name="getSubjectByIdResponse"/>
+    <message name="getAllMarks"/>
+    <message name="getAllMarksResponse"/>
+    <message name="getAllStudents"/>
+    <message name="getAllStudentsResponse"/>
+    <message name="getAllSubjects"/>
+    <message name="getAllSubjectsResponse"/>
+    <message name="getAllMarksSQL"/>
+    <message name="getAllMarksSQLResponse"/>
+    <message name="getAllMarksSQLStudentAndSubject"/>
+    <message name="getAllMarksSQLStudentAndSubjectResponse"/>
+    <message name="saveStudent"/>
+    <message name="saveStudentResponse"/>
+    <message name="saveStudentDTO"/>
+    <message name="saveStudentDTOResponse"/>
+    <message name="saveStudentDTO2"/>
+    <message name="saveStudentDTO2Response"/>
+    <message name="saveSubject"/>
+    <message name="saveSubjectResponse"/>
+    <message name="saveSubjectDTO"/>
+    <message name="saveSubjectDTOResponse"/>
+    <message name="saveSubjectDTO2"/>
+    <message name="saveSubjectDTO2Response"/>
+    <message name="saveMark"/>
+    <message name="saveMarkResponse"/>
+    <message name="saveMarkDTO"/>
+    <message name="saveMarkDTOResponse"/>
+    <message name="saveMarkDTO2"/>
+    <message name="saveMarkDTO2Response"/>
+    <message name="updateStudent"/>
+    <message name="updateStudentResponse"/>
+    <message name="updateStudentDTO"/>
+    <message name="updateStudentDTOResponse"/>
+    <message name="updateStudentDTO2"/>
+    <message name="updateStudentDTO2Response"/>
+    <message name="updateSubject"/>
+    <message name="updateSubjectResponse"/>
+    <message name="updateSubjectDTO"/>
+    <message name="updateSubjectDTOResponse"/>
+    <message name="updateSubjectDTO2"/>
+    <message name="updateSubjectDTO2Response"/>
+    <message name="updateMark"/>
+    <message name="updateMarkResponse"/>
+    <message name="updateMarkDTO"/>
+    <message name="updateMarkDTOResponse"/>
+    <message name="updateMarkDTO2"/>
+    <message name="updateMarkDTO2Response"/>
+    <message name="deleteStudent"/>
+    <message name="deleteStudentResponse"/>
+    <message name="deleteStudentDTO"/>
+    <message name="deleteStudentDTOResponse"/>
+    <message name="deleteStudentDTO2"/>
+    <message name="deleteStudentDTO2Response"/>
+    <message name="deleteSubject"/>
+    <message name="deleteSubjectResponse"/>
+    <message name="deleteSubjectDTO"/>
+    <message name="deleteSubjectDTOResponse"/>
+    <message name="deleteSubjectDTO2"/>
+    <message name="deleteSubjectDTO2Response"/>
+    <message name="deleteMark"/>
+    <message name="deleteMarkResponse"/>
+    <message name="deleteMarkDTO"/>
+    <message name="deleteMarkDTOResponse"/>
+    <message name="deleteMarkDTO2"/>
+    <message name="deleteMarkDTO2Response"/>
+    <message name="getAverageGrade"/>
+    <message name="getAverageGradeResponse"/>
+    <portType name="NewWebService">
+        <operation name="getStudentById">
+            <input message="tns:getStudentById"/>
+            <output message="tns:getStudentByIdResponse"/>
+        </operation>
+        <operation name="getSubjectGroupById">
+            <input message="tns:getSubjectGroupById"/>
+            <output message="tns:getSubjectGroupByIdResponse"/>
+        </operation>
+        <operation name="getMarkById">
+            <input message="tns:getMarkById"/>
+            <output message="tns:getMarkByIdResponse"/>
+        </operation>
+        <operation name="getSubjectById">
+            <input message="tns:getSubjectById"/>
+            <output message="tns:getSubjectByIdResponse"/>
+        </operation>
+        <operation name="getAllMarks">
+            <input message="tns:getAllMarks"/>
+            <output message="tns:getAllMarksResponse"/>
+        </operation>
+        <operation name="getAllStudents">
+            <input message="tns:getAllStudents"/>
+            <output message="tns:getAllStudentsResponse"/>
+        </operation>
+        <operation name="getAllSubjects">
+            <input message="tns:getAllSubjects"/>
+            <output message="tns:getAllSubjectsResponse"/>
+        </operation>
+        <operation name="getAllMarksSQL">
+            <input message="tns:getAllMarksSQL"/>
+            <output message="tns:getAllMarksSQLResponse"/>
+        </operation>
+        <operation name="getAllMarksSQLStudentAndSubject">
+            <input message="tns:getAllMarksSQLStudentAndSubject"/>
+            <output message="tns:getAllMarksSQLStudentAndSubjectResponse"/>
+        </operation>
+        <operation name="saveStudent">
+            <input message="tns:saveStudent"/>
+            <output message="tns:saveStudentResponse"/>
+        </operation>
+        <operation name="saveStudentDTO">
+            <input message="tns:saveStudentDTO"/>
+            <output message="tns:saveStudentDTOResponse"/>
+        </operation>
+        <operation name="saveStudentDTO2">
+            <input message="tns:saveStudentDTO2"/>
+            <output message="tns:saveStudentDTO2Response"/>
+        </operation>
+        <operation name="saveSubject">
+            <input message="tns:saveSubject"/>
+            <output message="tns:saveSubjectResponse"/>
+        </operation>
+        <operation name="saveSubjectDTO">
+            <input message="tns:saveSubjectDTO"/>
+            <output message="tns:saveSubjectDTOResponse"/>
+        </operation>
+        <operation name="saveSubjectDTO2">
+            <input message="tns:saveSubjectDTO2"/>
+            <output message="tns:saveSubjectDTO2Response"/>
+        </operation>
+        <operation name="saveMark">
+            <input message="tns:saveMark"/>
+            <output message="tns:saveMarkResponse"/>
+        </operation>
+        <operation name="saveMarkDTO">
+            <input message="tns:saveMarkDTO"/>
+            <output message="tns:saveMarkDTOResponse"/>
+        </operation>
+        <operation name="saveMarkDTO2">
+            <input message="tns:saveMarkDTO2"/>
+            <output message="tns:saveMarkDTO2Response"/>
+        </operation>
+        <operation name="updateStudent">
+            <input message="tns:updateStudent"/>
+            <output message="tns:updateStudentResponse"/>
+        </operation>
+        <operation name="updateStudentDTO">
+            <input message="tns:updateStudentDTO"/>
+            <output message="tns:updateStudentDTOResponse"/>
+        </operation>
+        <operation name="updateStudentDTO2">
+            <input message="tns:updateStudentDTO2"/>
+            <output message="tns:updateStudentDTO2Response"/>
+        </operation>
+        <operation name="updateSubject">
+            <input message="tns:updateSubject"/>
+            <output message="tns:updateSubjectResponse"/>
+        </operation>
+        <operation name="updateSubjectDTO">
+            <input message="tns:updateSubjectDTO"/>
+            <output message="tns:updateSubjectDTOResponse"/>
+        </operation>
+        <operation name="updateSubjectDTO2">
+            <input message="tns:updateSubjectDTO2"/>
+            <output message="tns:updateSubjectDTO2Response"/>
+        </operation>
+        <operation name="updateMark">
+            <input message="tns:updateMark"/>
+            <output message="tns:updateMarkResponse"/>
+        </operation>
+        <operation name="updateMarkDTO">
+            <input message="tns:updateMarkDTO"/>
+            <output message="tns:updateMarkDTOResponse"/>
+        </operation>
+        <operation name="updateMarkDTO2">
+            <input message="tns:updateMarkDTO2"/>
+            <output message="tns:updateMarkDTO2Response"/>
+        </operation>
+        <operation name="deleteStudent">
+            <input message="tns:deleteStudent"/>
+            <output message="tns:deleteStudentResponse"/>
+        </operation>
+        <operation name="deleteStudentDTO">
+            <input message="tns:deleteStudentDTO"/>
+            <output message="tns:deleteStudentDTOResponse"/>
+        </operation>
+        <operation name="deleteStudentDTO2">
+            <input message="tns:deleteStudentDTO2"/>
+            <output message="tns:deleteStudentDTO2Response"/>
+        </operation>
+        <operation name="deleteSubject">
+            <input message="tns:deleteSubject"/>
+            <output message="tns:deleteSubjectResponse"/>
+        </operation>
+        <operation name="deleteSubjectDTO">
+            <input message="tns:deleteSubjectDTO"/>
+            <output message="tns:deleteSubjectDTOResponse"/>
+        </operation>
+        <operation name="deleteSubjectDTO2">
+            <input message="tns:deleteSubjectDTO2"/>
+            <output message="tns:deleteSubjectDTO2Response"/>
+        </operation>
+        <operation name="deleteMark">
+            <input message="tns:deleteMark"/>
+            <output message="tns:deleteMarkResponse"/>
+        </operation>
+        <operation name="deleteMarkDTO">
+            <input message="tns:deleteMarkDTO"/>
+            <output message="tns:deleteMarkDTOResponse"/>
+        </operation>
+        <operation name="deleteMarkDTO2">
+            <input message="tns:deleteMarkDTO2"/>
+            <output message="tns:deleteMarkDTO2Response"/>
+        </operation>
+        <operation name="getAverageGrade">
+            <input message="tns:getAverageGrade"/>
+            <output message="tns:getAverageGradeResponse"/>
+        </operation>
+    </portType>
+    <binding name="NewWebServicePortBinding" type="tns:NewWebService">
+        <wsp:PolicyReference URI="#NewWebServicePortBindingPolicy"/>
+        <operation name="getStudentById">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getSubjectGroupById">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getMarkById">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getSubjectById">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllMarks">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllStudents">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllSubjects">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllMarksSQL">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllMarksSQLStudentAndSubject">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveStudent">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveStudentDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveStudentDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveSubject">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveSubjectDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveSubjectDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveMark">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveMarkDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="saveMarkDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateStudent">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateStudentDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateStudentDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateSubject">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateSubjectDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateSubjectDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateMark">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateMarkDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateMarkDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteStudent">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteStudentDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteStudentDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteSubject">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteSubjectDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteSubjectDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteMark">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteMarkDTO">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteMarkDTO2">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAverageGrade">
+            <input>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#NewWebServicePortBinding_getStudentById_Output_Policy"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="NewWebService">
+        <port name="NewWebServicePort" binding="tns:NewWebServicePortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="NewWebServicePortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <wsam:Addressing/>
+                <sc:KeyStore wspp:visibility="private" location="C:\Users\rsawoniewski\WSTestDomain\config\keystore.jks" type="JKS" storepass="changeit" alias="xws-security-server"/>
+                <sp:SymmetricBinding>
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:WssX509V3Token10/>
+                                        <sp:RequireIssuerSerialReference/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Strict/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:Wss11>
+                    <wsp:Policy>
+                        <sp:MustSupportRefIssuerSerial/>
+                        <sp:MustSupportRefThumbprint/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+                <sp:SignedEncryptedSupportingTokens>
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SignedEncryptedSupportingTokens>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="NewWebServicePortBinding_getStudentById_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="NewWebServicePortBinding_getStudentById_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>
